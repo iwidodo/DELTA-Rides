@@ -46,7 +46,7 @@ public class MainRunner {
 		// locs.readLocInfo("10_locations_4_vol");
 		// locs.readLocInfo("19_locations_6_vol");
 		
-		//input from website
+		//input from website - IGNORE, WEBSITE IN DEV
 		//locs.readLocInfo("attendees.txt");
 		
 		
