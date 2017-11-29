@@ -1,3 +1,4 @@
+
 package minDistance;
 
 import java.io.BufferedWriter;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class GRASPheruristic {
+public class GRASPforTwoDrivers {
 	Locations locs;
 	Location driver;
 	ArrayList<Location> passengers;
@@ -19,7 +20,7 @@ public class GRASPheruristic {
 	int numOfLoc;
 	Random rand;
 	
-	public GRASPheruristic (Locations locs, Location driver, Integer maxNonImpMove, Integer maxShuffle) { 
+	public GRASPforTwoDrivers (Locations locs, Location driver, Integer maxNonImpMove, Integer maxShuffle) { 
 		this.locs = locs;
 		this.driver = driver;
 		this.passengers = driver.pickupList;

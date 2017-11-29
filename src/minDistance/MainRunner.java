@@ -41,13 +41,13 @@ public class MainRunner {
 		// locs.readLocInfo("15_locations_5_vol");
 		// locs.readLocInfo("5_locations_2_vol");
 		// locs.readLocInfo("13_locations_3_vol");
-		// locs.readLocInfo("25_locations_4_vol");
+		locs.readLocInfo("25_locations_4_vol");
 		// locs.readLocInfo("9_locations_2_vol");
 		// locs.readLocInfo("10_locations_4_vol");
-		 locs.readLocInfo("19_locations_6_vol");
+		// locs.readLocInfo("19_locations_6_vol");
 		
 		//input from website
-		// locs.readLocInfo("attendees.txt");
+		//locs.readLocInfo("attendees.txt");
 		
 		
 		// if there is not enough capacity, then add school busses

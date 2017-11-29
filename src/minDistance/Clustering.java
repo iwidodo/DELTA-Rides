@@ -15,11 +15,28 @@ public class Clustering {
 		this.destination = locs.destinationLoc;
 	}
 	
-	// cluster passengers by assigning them to the closest available path
-	void assigneToClosestPath (){
-		
+/*
+	void assignToClosestPath (){
+		double distance;
+		for (Location passenger: passengers) {
+			double closestPathDist = Double.MAX_VALUE;
+			Location closestPath = passenger;
+			for (Location driver: drivers) {
+				if (driver.remainedCapacity > 0){
+					distance = locs.tableDistanceByLoc.get(passenger, driver);
+					if (distance < closestPathDist) {
+						closestPathDist = distance;
+						closestPath=driver;
+					}
+				}
+			}
+			passenger.assignedTo=closestPath;
+			closestPath.pickupList.add(passenger);
+			closestPath.remainedCapacity=closestPath.remainedCapacity-1;
+		}
+			
 	}
-	
+	*/
 	
 	// cluster passengers by assigning them to the closest available driver
 	void assignToClosestDriver (){
@@ -40,9 +57,8 @@ public class Clustering {
 			closestDriver.pickupList.add(passenger);
 			closestDriver.remainedCapacity=closestDriver.remainedCapacity-1;
 		}
-	}
-	
-	void assignDriverToClosestPassenger () {
-		
-	}
+	}	
+
 }
+
+

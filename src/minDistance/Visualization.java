@@ -1,5 +1,10 @@
 package minDistance;
 
+import java.awt.Desktop;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +33,7 @@ import com.mxgraph.view.mxGraph;
 		
 		public Visualization(Locations locs, String title)
 		{
-			super("Event Transportation Manager (E-TraM) - " + title);
+			super("DELivery Transportation Algorithm for Ridesharers (DELTA-Rides) - " + title);
 			this.locs = locs;
 			backgroundMap = "./input/newmap.png";	
 			graph = new mxGraph();
@@ -54,15 +59,15 @@ import com.mxgraph.view.mxGraph;
 			for(Location loc: locs.driverList){
 				// mxGraph.insertVertex(parent, id, value, x, y, width, height, style) 
 				// creates and inserts a new vertex into the model, within a begin/end update call.
-				loc.vertex = graph.insertVertex(parent, loc.locId, loc.locId, 
+				loc.vertex = graph.insertVertex(parent, loc.locName, loc.locName, 
 						getMapX(loc.lon), getMapY(loc.lat), w, h, "ROUNDED;strokeColor=black;fillColor=green"); 
 			}
 			for(Location loc: locs.passengerList){
-				loc.vertex = graph.insertVertex(parent, loc.locId, loc.locId, 
+				loc.vertex = graph.insertVertex(parent, loc.locName, loc.locName, 
 						getMapX(loc.lon), getMapY(loc.lat), w, h, "ROUNDED;strokeColor=black;fillColor=white");
 			}
 			Location loc = locs.destinationLoc;
-			loc.vertex = graph.insertVertex(parent, loc.locId, loc.locId, 
+				loc.vertex = graph.insertVertex(parent, loc.locName, loc.locName, 
 					getMapX(loc.lon), getMapY(loc.lat), w, h, "ROUNDED;strokeColor=black;fillColor=red");
 			
 			setBackground();
@@ -87,7 +92,7 @@ import com.mxgraph.view.mxGraph;
 		}
 		
 		
-		public void showRoute() {
+		public void showRoute() throws MalformedURLException {
 			showNodes();
 			List<String> colorList = new ArrayList<String>();
 			String edgeColor;
@@ -98,6 +103,11 @@ import com.mxgraph.view.mxGraph;
 			colorList.add("green");
 			colorList.add("black");
 			colorList.add("pink");
+			colorList.add("yellow");
+			
+			// To show in web browser
+			String pathString = "https://www.google.com/maps/dir/";
+			
 			for(Location driver: locs.driverList) {
 				edgeColor = colorList.get(locs.driverList.indexOf(driver)%5);
 				lineStyle = "dashed=1;fontColor=black;strokeColor="+edgeColor;
@@ -106,18 +116,34 @@ import com.mxgraph.view.mxGraph;
 				int travelOrder = 1; 
 				for(Location lc: driver.bestRoutes.get(driver.bestRoutes.size()-1)) { 
 					toLoc = lc;
+					String latAsString = Double.toString(toLoc.lat);
+					String lonAsString = Double.toString(toLoc.lon);
+					pathString = pathString + "\'" + latAsString + "," + lonAsString + "\'/";
+					System.out.println(pathString);
+					
 					graph.insertEdge(parent, fromLoc.locId+toLoc.locId,
 							travelOrder, fromLoc.vertex, toLoc.vertex, lineStyle);
 					fromLoc = toLoc;
 					travelOrder++;
 				}
 				toLoc = locs.destinationLoc;
+				String latAsString = Double.toString(toLoc.lat);
+				String lonAsString = Double.toString(toLoc.lon);
+				pathString = pathString + "\'" + latAsString + "," + lonAsString + "\'/";
+				System.out.println(pathString);
+				//URL pathURL = new URL(pathString);
+				//openWebpage(pathURL);
 				// mxGraph.insertEdge(parent, id, value, source, target, style) 
 				// creates and inserts a new edge into the model, within a begin/end update call.
 				graph.insertEdge(parent, fromLoc.locId+toLoc.locId,
 						travelOrder, fromLoc.vertex, toLoc.vertex, lineStyle);
 			}	
 			showStatistics();
+			
+			//command to print final google maps url
+			URL pathURL = new URL(pathString);
+			openWebpage(pathURL);
+			
 		}
 		
 		public void showStatistics() {
@@ -147,6 +173,28 @@ import com.mxgraph.view.mxGraph;
 			graph.insertVertex(info, "cost", "TOTAL : " +  totalTravelDistance, 
 					5, verticalSpace+=20, 200, 20, "ROUNDED;strokeColor=white;fillColor=white");
 			
+		}
+		
+		
+		
+		// to Open a web page for given URL
+		public static void openWebpage(URI uri) {
+		    Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+		    if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+		        try {
+		            desktop.browse(uri);
+		        } catch (Exception e) {
+		            e.printStackTrace();
+		        }
+		    }
+		}
+
+		public static void openWebpage(URL url) {
+		    try {
+		        openWebpage(url.toURI());
+		    } catch (URISyntaxException e) {
+		        e.printStackTrace();
+		    }
 		}
 	}
 

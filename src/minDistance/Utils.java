@@ -5,12 +5,12 @@ import java.util.Random;
 
 public class Utils {
 
-	
+	/*
 	public void readExcelInput () { 
-		
-		
 	}
+	*/
 	
+	// Display the distance from passenger to passenger
 	public static double calculateTotalDistance(Locations locs, Location driver, List<Location> passengerList) {
 		double totalDistance = 0.0;
 		Location fromLoc = driver;
@@ -27,6 +27,7 @@ public class Utils {
 		return totalDistance;
 	}
 	
+	// Display the resulting order in which passengers are picked up
 	public static String printPath(List<Location> locList) { 
 		String path=""; 
 		for(Location st: locList) 
@@ -34,6 +35,7 @@ public class Utils {
 		return path;
 	}
 	
+	// Display the Base distance
 	public static double getBaseTravelDistance(Locations locs) { 
 		double baseDistance = 0;
 		for(Location loc: locs.locList) { 
