@@ -1,0 +1,65 @@
+Base distance: 185.0
+
+ SUMMARY (Distance, Route) :
+7.0 : St13 - St29 - St28 - 
+16.0 : St13 - St29 - St2 - 
+7.0 : St13 - St29 - St28 - 
+16.0 : St29 - St28 - St20 - 
+7.0 : St13 - St29 - St28 - 
+8.0 : St29 - St28 - St37 - 
+7.0 : St13 - St29 - St28 - 
+7.0 : St13 - St29 - St36 - 
+7.0 : St13 - St29 - St28 - 
+18.0 : St19 - St20 - St21 - St22 - St23 - 
+17.0 : St19 - St20 - St23 - St22 - St21 - 
+17.0 : St30 - St20 - St23 - St22 - St19 - 
+17.0 : St30 - St20 - St22 - St23 - St19 - 
+17.0 : St30 - St26 - St20 - St22 - St23 - 
+16.0 : St26 - St20 - St23 - St22 - St30 - 
+17.0 : St23 - St20 - St22 - St26 - St30 - 
+17.0 : St13 - St26 - St30 - St22 - St23 - 
+17.0 : St30 - St26 - St22 - St23 - St20 - 
+16.0 : St30 - St20 - St23 - St22 - St26 - 
+11.0 : St36 - St37 - St35 - St14 - St3 - St4 - 
+10.0 : St36 - St37 - St35 - St4 - St3 - St14 - 
+9.0 : St3 - St4 - St14 - St36 - St37 - St35 - 
+13.0 : St36 - St14 - St4 - St3 - St13 - St35 - 
+12.0 : St36 - St14 - St13 - St3 - St4 - St35 - 
+11.0 : St3 - St4 - St13 - St14 - St36 - St35 - 
+11.0 : St14 - St36 - St37 - St35 - St3 - St4 - 
+10.0 : St36 - St14 - St4 - St3 - St37 - St35 - 
+9.0 : St4 - St3 - St14 - St36 - St35 - St37 - 
+19.0 : St36 - St14 - St3 - St4 - St35 - St25 - 
+18.0 : St25 - St14 - St3 - St4 - St35 - St36 - 
+16.0 : St25 - St4 - St3 - St14 - St35 - St36 - 
+15.0 : St14 - St4 - St3 - St25 - St35 - St36 - 
+11.0 : St14 - St36 - St37 - St35 - St4 - St3 - 
+10.0 : St36 - St14 - St3 - St4 - St37 - St35 - 
+9.0 : St3 - St4 - St14 - St36 - St35 - St37 - 
+12.0 : St14 - St28 - St37 - St35 - St4 - St3 - 
+10.0 : St28 - St14 - St3 - St4 - St37 - St35 - 
+18.0 : St15 - St25 - St2 - St26 - St27 - St30 - St31 - 
+17.0 : St15 - St25 - St2 - St26 - St31 - St30 - St27 - 
+16.0 : St31 - St25 - St2 - St26 - St15 - St30 - St27 - 
+13.0 : St31 - St25 - St2 - St15 - St26 - St30 - St27 - 
+12.0 : St31 - St2 - St25 - St15 - St26 - St30 - St27 - 
+13.0 : St15 - St25 - St31 - St27 - St26 - St30 - St28 - 
+12.0 : St31 - St15 - St25 - St27 - St30 - St26 - St28 - 
+14.0 : St25 - St15 - St2 - St31 - St27 - St26 - St30 - 
+13.0 : St31 - St15 - St2 - St25 - St27 - St26 - St30 - 
+12.0 : St31 - St15 - St25 - St2 - St27 - St26 - St30 - 
+20.0 : St25 - St2 - St15 - St21 - St27 - St26 - St31 - 
+16.0 : St25 - St2 - St15 - St21 - St31 - St26 - St27 - 
+15.0 : St25 - St2 - St31 - St21 - St15 - St26 - St27 - 
+14.0 : St31 - St2 - St25 - St21 - St15 - St26 - St27 - 
+13.0 : St31 - St2 - St25 - St15 - St21 - St26 - St27 - 
+14.0 : St31 - St2 - St21 - St25 - St15 - St26 - St27 - 
+14.0 : St25 - St2 - St21 - St19 - St15 - St31 - St27 - 
+13.0 : St31 - St2 - St21 - St19 - St15 - St25 - St27 - 
+12.0 : St31 - St2 - St25 - St15 - St19 - St21 - St27 - 
+13.0 : St31 - St15 - St19 - St25 - St2 - St21 - St27 - 
+14.0 : St15 - St19 - St21 - St2 - St31 - St27 - St37 - 
+13.0 : St31 - St2 - St15 - St19 - St21 - St27 - St37 - 
+14.0 : St19 - St21 - St15 - St25 - St2 - St31 - St27 - 
+13.0 : St31 - St25 - St15 - St19 - St21 - St2 - St27 - 
+12.0 : St31 - St2 - St25 - St15 - St19 - St21 - St27 - 
