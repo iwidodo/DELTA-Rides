@@ -24,7 +24,7 @@ public class MainRunner {
 		// create new location object
 		Locations locs = new Locations();
 		
-		// read location (students, volunteers) information **************************************
+	// UNCOMMENT to Select Desired Input File **************************************
 		// locs.readLocInfo("2_locations_0_cap.txt");
 		// locs.readLocInfo("10_locations_2_vol");
 		// locs.readLocInfo("9_locations_3_vol");
