@@ -7,3 +7,4 @@ This project is culmination of 3 years of research and development by Imam Widod
 1. Copy address under "Clone or Download"
 1. Import into Eclipse using:  
 IMPORT > GIT > PROJECTS FROM GIT > CLONE URI > PASTE ADDRESS
+1. Open MainRunner.java from:  SRC > minDistance
