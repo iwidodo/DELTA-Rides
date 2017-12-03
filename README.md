@@ -10,3 +10,6 @@ IMPORT > GIT > PROJECTS FROM GIT > CLONE URI > PASTE ADDRESS
 1. Open MainRunner.java from:  SRC > minDistance
 1. Select desired input file by uncommenting it from list
 1. Save + Run
+
+Watch our interview!
+tinyurl.com/zbzlheg 
